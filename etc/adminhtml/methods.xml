@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2017 Magmodules.eu. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <include path="Ginger_Payments::methods/ideal.xml"/>
+    <include path="Ginger_Payments::methods/creditcard.xml"/>
+    <include path="Ginger_Payments::methods/bancontact.xml"/>
+    <include path="Ginger_Payments::methods/sofort.xml"/>
+    <include path="Ginger_Payments::methods/banktransfer.xml"/>
+</include>

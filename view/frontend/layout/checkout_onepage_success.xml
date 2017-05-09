@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Ginger_Payments::css/success.css" />
+    </head>
+    <body>
+        <referenceContainer name="order.success.additional.info">
+            <block class="Ginger\Payments\Block\Checkout\Success" name="ginger.checkout.success" template="checkout/success.phtml" after="-"/>
+        </referenceContainer>
+    </body>
+</page>

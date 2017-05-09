@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © 2017 Magmodules.eu. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/**
+ * @var $block \Ginger\Payments\Block\Checkout\Success
+ */
+?>
+<?php if ($mailingAddress = $block->getMailingAddress()) { ?>
+    <div class="ginger-payment-instuctions">
+        <b><?php echo __('Payment instructions:') ?></b>
+        <br/>
+        <?php echo __('Please use the following data to make the banktransfer') ?>
+        <br/>
+        <?php echo nl2br($mailingAddress) ?>
+        <br/>
+        <?php echo __('Ginger Payments processes the payments for'); ?> <?php echo $block->getCompanyName() ?>
+        <br/>
+        <br/>
+        <?php echo __("(!) Don't forget to use the reference in your payment. Without the reference the processing of your payment can take more time!"); ?>
+    </div>
+<?php } ?>

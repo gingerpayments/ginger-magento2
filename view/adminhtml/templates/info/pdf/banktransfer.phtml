@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2017 Magmodules.eu. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+ * @var $block Ginger\Payments\Block\Info\Banktransfer
+ */
+?>
+<?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?>
+{{pdf_row_separator}}
+<?php if ($block->getInfo()->getAdditionalInformation()) { ?>
+    {{pdf_row_separator}}
+    <?php if ($block->getMailingAddress()) { ?>
+        {{pdf_row_separator}}
+        <?php /* @noEscape */
+        echo nl2br($block->escapeHtml($block->getMailingAddress())) ?>
+        {{pdf_row_separator}}
+    <?php } ?>
+<?php } ?>

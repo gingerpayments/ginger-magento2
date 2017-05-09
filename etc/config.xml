@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <ginger_general>
+                <active>0</active>
+                <enabled>0</enabled>
+                <type>test</type>
+                <payment_images>1</payment_images>
+                <debug>1</debug>
+                <apikey backend_model="Magento\Config\Model\Config\Backend\Encrypted"></apikey>
+                <model>Ginger\Payments\Model\Methods\General</model>
+            </ginger_general>
+            <ginger_methods_bancontact>
+                <active>0</active>
+                <model>Ginger\Payments\Model\Methods\Bancontact</model>
+                <title>Bancontact</title>
+                <description>Order %id%</description>
+                <order_status_pending>pending_payment</order_status_pending>
+                <generate_invoice>1</generate_invoice>
+                <order_status_processing>processing</order_status_processing>
+                <invoice_notify>1</invoice_notify>
+                <payment_action>order</payment_action>
+                <allowspecific>0</allowspecific>
+                <instructions></instructions>
+            </ginger_methods_bancontact>
+            <ginger_methods_banktransfer>
+                <active>0</active>
+                <model>Ginger\Payments\Model\Methods\Banktransfer</model>
+                <title>Banktransfer</title>
+                <description>Order %id%</description>
+                <order_status_pending>pending_payment</order_status_pending>
+                <generate_invoice>1</generate_invoice>
+                <order_status_processing>processing</order_status_processing>
+                <invoice_notify>1</invoice_notify>
+                <payment_action>order</payment_action>
+                <allowspecific>0</allowspecific>
+                <instructions></instructions>
+                <account_details>
+                    <iban>NL65RABO0168706814</iban>
+                    <bic>RABONL2U</bic>
+                    <holder>St. Derdengelden Ginger Payments</holder>
+                    <city>Utrecht, NL</city>
+                </account_details>
+            </ginger_methods_banktransfer>
+            <ginger_methods_creditcard>
+                <active>0</active>
+                <model>Ginger\Payments\Model\Methods\Creditcard</model>
+                <title>Credit Cards</title>
+                <description>Order %id%</description>
+                <order_status_pending>pending_payment</order_status_pending>
+                <generate_invoice>1</generate_invoice>
+                <order_status_processing>processing</order_status_processing>
+                <invoice_notify>1</invoice_notify>
+                <payment_action>order</payment_action>
+                <allowspecific>0</allowspecific>
+                <instructions></instructions>
+            </ginger_methods_creditcard>
+            <ginger_methods_ideal>
+                <active>0</active>
+                <model>Ginger\Payments\Model\Methods\Ideal</model>
+                <title>iDeal</title>
+                <description>Order %id%</description>
+                <order_status_pending>pending_payment</order_status_pending>
+                <generate_invoice>1</generate_invoice>
+                <order_status_processing>processing</order_status_processing>
+                <invoice_notify>1</invoice_notify>
+                <payment_action>order</payment_action>
+                <allowspecific>0</allowspecific>
+                <instructions></instructions>
+            </ginger_methods_ideal>
+            <ginger_methods_sofort>
+                <active>0</active>
+                <model>Ginger\Payments\Model\Methods\Sofort</model>
+                <title>SOFORT</title>
+                <description>Order %id%</description>
+                <order_status_pending>pending_payment</order_status_pending>
+                <generate_invoice>1</generate_invoice>
+                <order_status_processing>processing</order_status_processing>
+                <invoice_notify>1</invoice_notify>
+                <payment_action>order</payment_action>
+                <allowspecific>0</allowspecific>
+                <instructions></instructions>
+            </ginger_methods_sofort>
+        </payment>
+    </default>
+</config>
