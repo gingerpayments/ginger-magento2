@@ -1,7 +1,7 @@
 {
   "name": "gingerpayments/ginger-magento2",
   "description": "Ginger Payments for Magento 2",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "require": {
     "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
     "gingerpayments/ginger-php": "*"

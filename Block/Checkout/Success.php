@@ -11,7 +11,6 @@ use Magento\Framework\View\Element\Template\Context;
 use Magento\Sales\Model\Order;
 use Magento\Checkout\Model\Session;
 use Magento\Sales\Model\OrderFactory;
-use Magento\Store\Model\StoreManagerInterface;
 use Ginger\Payments\Helper\General as GingerHelper;
 
 class Success extends Template
@@ -26,27 +25,25 @@ class Success extends Template
     /**
      * Success constructor.
      *
-     * @param Context               $context
-     * @param Order                 $salesOrderFactory
-     * @param Session               $checkoutSession
-     * @param OrderFactory          $orderFactory
-     * @param StoreManagerInterface $storeManager
-     * @param GingerHelper          $gingerHelper
-     * @param array                 $data
+     * @param Context      $context
+     * @param Order        $salesOrderFactory
+     * @param Session      $checkoutSession
+     * @param OrderFactory $orderFactory
+     * @param GingerHelper $gingerHelper
+     * @param array        $data
      */
     public function __construct(
         Context $context,
         Order $salesOrderFactory,
         Session $checkoutSession,
         OrderFactory $orderFactory,
-        StoreManagerInterface $storeManager,
         GingerHelper $gingerHelper,
         array $data = []
     ) {
         $this->salesFactory = $salesOrderFactory;
         $this->checkoutSession = $checkoutSession;
         $this->orderFactory = $orderFactory;
-        $this->storeManager = $storeManager;
+        $this->storeManager = $context->getStoreManager();
         $this->gingerHelper = $gingerHelper;
         parent::__construct($context, $data);
     }
